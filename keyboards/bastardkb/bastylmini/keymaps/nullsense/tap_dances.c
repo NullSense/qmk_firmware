@@ -53,5 +53,10 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [DOT_TD] = ACTION_TAP_DANCE_FN_ADVANCED_USER(sentence_end, NULL, NULL, KC_DOT),
     [EXLM_TD] = ACTION_TAP_DANCE_FN_ADVANCED_USER(sentence_end, NULL, NULL, KC_EXLM),
     [QUES_TD] = ACTION_TAP_DANCE_FN_ADVANCED_USER(sentence_end, NULL, NULL, KC_SLSH),
+
+    // Double tap leads to space on the 2nd tap
+    [COMM_TD] = ACTION_TAP_DANCE_FN_ADVANCED_USER(double_tap_space, NULL, NULL, KC_COMM),
+    [QUOT_TD] = ACTION_TAP_DANCE_FN_ADVANCED_USER(double_tap_space, NULL, NULL, KC_QUOT),
+    [COLN_TD] = ACTION_TAP_DANCE_FN_ADVANCED_USER(double_tap_space, NULL, NULL, KC_SCLN),
     [ONE_SHOT_CAPS] = ACTION_TAP_DANCE_FN(one_shot_caps),
 };

@@ -7,6 +7,9 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case DOT:
         case EXLM:
         case QUES:
+        case COMM:
+        case QUOT:
+        case COLN:
         case OS_CAPS:
             return TAPPING_TERM + 200;
             break;
@@ -23,9 +26,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
         EMAIL,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   MO(5),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-     LAUNCHER,   ALT_A,   CTL_S,   GUI_D,   SFT_F,    KC_G,                         KC_H,   SFT_J,   GUI_K,   CTL_L, KC_SCLN, KC_QUOT,
+     LAUNCHER,   ALT_A,   CTL_S,   GUI_D,   SFT_F,    KC_G,                         KC_H,   SFT_J,   GUI_K,   CTL_L,    COLN,    QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      BROWSER,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,     DOT,    QUES,    LOCK,
+      BROWSER,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M,    COMM,     DOT,    QUES,    LOCK,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                             TAB_4,   BSP_1, OS_CAPS,     KC_ENT,   SPC_2,   ESC_3
                                       //`--------------------------'  `--------------------------'

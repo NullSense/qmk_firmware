@@ -6,6 +6,9 @@ enum {
     DOT_TD = 0,
     EXLM_TD,
     QUES_TD,
+    COMM_TD,
+    QUOT_TD,
+    COLN_TD,
     ONE_SHOT_CAPS,
 };
 
@@ -44,6 +47,9 @@ enum layer_names {
 #define DOT TD(DOT_TD)
 #define EXLM TD(EXLM_TD)
 #define QUES TD(QUES_TD)
+#define COMM TD(COMM_TD)
+#define QUOT TD(QUOT_TD)
+#define COLN TD(COLN_TD)
 
 // file manager (lf)
 #define FILE_MAN LCTL(KC_BSLS)
