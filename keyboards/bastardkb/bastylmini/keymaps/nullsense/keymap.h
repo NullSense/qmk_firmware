@@ -16,11 +16,12 @@ enum custom_keycodes {
 
 enum layer_names {
     _QWERTY,
-    _NUM,
     _SYM,
     _NAV,
     _MEDIA,
     _RGB,
+    _GAM,
+    _NUM,
 };
 
 // home row mods
@@ -34,10 +35,10 @@ enum layer_names {
 #define CTL_L LCTL_T(KC_L)
 
 // layers
-#define SPC_2 LT(2,KC_SPC)
-#define ESC_3 LT(3,KC_ESC)
-#define TAB_4 LT(4,KC_TAB)
-#define BSP_1 LT(1,KC_BSPC)
+#define SPC_1 LT(1,KC_SPC)
+#define ESC_2 LT(2,KC_ESC)
+#define TAB_3 LT(3,KC_TAB)
+#define BSP_6 LT(6,KC_BSPC)
 
 // tap dances
 #define OS_CAPS TD(ONE_SHOT_CAPS)

@@ -15,7 +15,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING("matas234@gmail.com");
             }
             break;
-        case BSP_1: // Del if Shift + Backspace are pressed
+        case BSP_6: // Del if Shift + Backspace are pressed
             if (record->tap.count > 0) {
                 static bool delkey_registered;
 
