@@ -6,7 +6,7 @@ enum {
     DOT_TD = 0,
     EXLM_TD,
     QUES_TD,
-    ONE_SHOT_CAPS,
+    CAPSWORD,
 };
 
 enum custom_keycodes {
@@ -41,7 +41,7 @@ enum layer_names {
 #define BSP_6 LT(6,KC_BSPC)
 
 // tap dances
-#define OS_CAPS TD(ONE_SHOT_CAPS)
+#define OS_CAPS TD(CAPSWORD)
 #define DOT TD(DOT_TD)
 #define EXLM TD(EXLM_TD)
 #define QUES TD(QUES_TD)

@@ -1,20 +1,27 @@
 #include "keymap.h"
-#include "one_shot_caps.c"
+#include "casemodes.h"
 #include "sentence_end.c"
 
 // Initialize variable holding the binary
 // representation of active modifiers.
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    caps_word_process_user(keycode, record);
+    if (!process_case_modes(keycode, record)) {
+        return false;
+    }
 
     uint8_t mod_state = get_mods();
 
     switch (keycode) {
+        case CAPSWORD:
+            if (record->event.pressed) {
+                enable_caps_word();
+            }
+            return false;
         case EMAIL:
             if (record->event.pressed) {
                 SEND_STRING("matas234@gmail.com");
             }
-            break;
+            return true;
         case BSP_6: // Del if Shift + Backspace are pressed
             if (record->tap.count > 0) {
                 static bool delkey_registered;
@@ -42,6 +49,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 }
                 return true;
             }
+        default:
+            return true;
     }
     return true;
 };
@@ -53,5 +62,5 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [DOT_TD] = ACTION_TAP_DANCE_FN_ADVANCED_USER(sentence_end, NULL, NULL, KC_DOT),
     [EXLM_TD] = ACTION_TAP_DANCE_FN_ADVANCED_USER(sentence_end, NULL, NULL, KC_EXLM),
     [QUES_TD] = ACTION_TAP_DANCE_FN_ADVANCED_USER(sentence_end, NULL, NULL, KC_SLSH),
-    [ONE_SHOT_CAPS] = ACTION_TAP_DANCE_FN(one_shot_caps),
+    [CAPSWORD] = ACTION_TAP_DANCE_FN(one_shot_caps),
 };

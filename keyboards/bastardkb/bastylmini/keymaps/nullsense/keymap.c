@@ -27,6 +27,24 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
+bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        // only necessary for shifts?
+        /*case ALT_A:*/
+        /*case CTL_S:*/
+        /*case GUI_D:*/
+        case SFT_F:
+        case SFT_J:
+        /*case GUI_K:*/
+        /*case CTL_L:*/
+            return true;
+        default:
+            return false;
+    }
+}
+
+
+
 // check the readme.md for the layout
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_split_3x6_3(

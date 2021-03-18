@@ -9,7 +9,7 @@
 #define TAPPING_TERM 140 // If you have a lot of accidental mod activations, crank up the tapping term
 #define TAPPING_TERM_PER_KEY
 #define IGNORE_MOD_TAP_INTERRUPT
-#define TAPPING_FORCE_HOLD
+#define TAPPING_FORCE_HOLD_PER_KEY
 #define PERMISSIVE_HOLD
 
 #define COMBO_COUNT 1
