@@ -7,3 +7,4 @@ VELOCIKEY_ENABLE = yes
 LINK_TIME_OPTIMIZATION = yes
 
 SRC += casemodes.c
+VPATH  +=  keyboards/gboards/

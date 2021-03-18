@@ -1,0 +1,3 @@
+SUBS(bkdir_combo, "../", TAB_3, DOT)
+COMB(gam_layer, TG(5), TAB_3, EMAIL)
+COMB(bksl_combo, KC_BSLS, SFT_J, SFT_F)

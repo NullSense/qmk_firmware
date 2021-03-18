@@ -1,16 +1,23 @@
 #include QMK_KEYBOARD_H
 #include "tap_dances.c"
+#include "g/keymap_combo.h"
 #include "rgb.c"
 
-enum combos {
-    GAM_TAB,
-};
+/*enum combos {*/
+    /*GAM_TAB,*/
+    /*BSLSH,*/
+    /*BKDIR*/
+/*};*/
 
-const uint16_t PROGMEM gam_combo[] = {TAB_3, EMAIL, COMBO_END};
+/*const uint16_t PROGMEM gam_combo[] = {TAB_3, EMAIL, COMBO_END};*/
+/*const uint16_t PROGMEM bslsh_combo[] = {SFT_J, SFT_F, COMBO_END};*/
+/*const uint16_t PROGMEM bkdir_combo[] = {TAB_3, DOT, COMBO_END};*/
 
-combo_t key_combos[COMBO_COUNT] = {
-    [GAM_TAB] = COMBO(gam_combo, TG(5))
-};
+/*combo_t key_combos[COMBO_COUNT] = {*/
+    /*[GAM_TAB] = COMBO(gam_combo, TG(5)),*/
+    /*[BSLSH] = COMBO(bslsh_combo, KC_BSLS),*/
+    /*[BKDIR] = SUBS(bkdir_combo, SEND_STRING("../"))*/
+/*};*/
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
@@ -30,13 +37,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         // only necessary for shifts?
-        /*case ALT_A:*/
-        /*case CTL_S:*/
-        /*case GUI_D:*/
         case SFT_F:
         case SFT_J:
-        /*case GUI_K:*/
-        /*case CTL_L:*/
             return true;
         default:
             return false;
